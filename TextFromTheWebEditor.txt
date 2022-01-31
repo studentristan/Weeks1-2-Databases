@@ -1,0 +1,37 @@
+Student
+-
+SID PK int FK >- Parent.SID FK >- Supplies.SID
+FName string
+LName string
+DOB int
+Alergies string
+DropOffPickUpInstruction string
+SpecialInstruction string
+ParentLicenseNum string
+Teacher int
+
+Parent
+-
+LisenseNum PK int FK >- Student.ParentLicenseNum
+LisensePlate string
+FName string
+LName string
+CoParent string
+CarMake string
+Address string
+SID int
+
+
+Staff
+----
+StaffID PK int FK >- Student.Teacher
+FName string
+LName string
+rate real
+studentList blob
+
+
+Supplies
+-
+MatIDNum PK int
+SID int
